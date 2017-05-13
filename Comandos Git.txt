@@ -1,0 +1,36 @@
+# Lista as configurações disponiveis do Git:
+git config --list
+
+# Configura o nome de usuário padrão, esse nome sera exibido nos commits:
+git config --global user.name SEU-NOME-AQUI!
+
+# Configura o email padrão, esse email sera exibido nos commits:
+git config --global user.email SEU-EMAIL-AQUI!
+
+# Inicia um diretorio, a pasta .git sera criada:
+git init
+
+# Sincronizando com o GitHub:
+git remote add origin https://github.com/junio-moreira/outro-repo.git
+git push -u origin master
+
+# Baixando um diretorio do GitHub:
+git clone https://github.com/junio-moreira/outro-repo.git
+
+# Vendo as referencias do diretorio:
+git remote -v
+
+# Verifica o estado do repositório e a área de staging:
+git status
+
+# Adiciona arquivos ao stage para serem commitados no servidor remoto:
+git add <nome_do_arquivo> ou <.> para todos os arquivos
+
+# Prepara o commit dos arquivos do stage para o servidor remoto, exibe o editor para adicionar um comentario
+git commit
+
+# Envia para o servidor remoto as alterações:
+git push <origin> ou <https://github.com/junio-moreira/outro-repo.git>
+
+# Baixa do servidor remoto as alterções:
+git pull origin
