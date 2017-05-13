@@ -21,16 +21,19 @@ git clone https://github.com/junio-moreira/outro-repo.git
 git remote -v
 
 # Verifica o estado do repositório e a área de staging:
-git status
+git status , <-s> , <--short>
 
-# Adiciona arquivos ao stage para serem commitados no servidor remoto:
-git add <nome_do_arquivo> ou <.> para todos os arquivos
+# Adiciona arquivos ao stage:
+git add <nome_do_arquivo> , <.> , <-A>
 
 # Prepara o commit dos arquivos do stage para o servidor remoto, exibe o editor para adicionar um comentario
-git commit
+git commit , <-a> , <-m "TEXTO-AQUI!"> , <-amend> 
 
-# Envia para o servidor remoto as alterações:
+# Envia as alterações para o repositório remoto, onde origin é o remote e master o branch:
 git push <origin> ou <https://github.com/junio-moreira/outro-repo.git>
 
-# Baixa do servidor remoto as alterções:
+# Baixa commits do repositorio remoto:
 git pull origin
+
+# Atualiza as referencias com um repositório remoto:
+git fetch origin
